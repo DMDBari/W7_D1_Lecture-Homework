@@ -350,6 +350,99 @@ console.log(quiz3);
 
 var quiz4 = '10' > '9';
 console.log(quiz4);
-// Both valuse are already strings, so no need for type conversion, strings compare alphabetically
+// Both values are already strings, so no need for type conversion, strings compare alphabetically
+
+var quiz5 = 'S' > 9;
+console.log(quiz5);
+
+console.clear();
+
+// Boolean Datatypes - true and false  (Python True False)
+
+var myBool1 = true;
+console.log(myBool1);
+console.log(typeof myBool1);
+
+var myBool2 = false;
+console.log(myBool2);
+console.log(typeof myBool2);
 
 
+// Boolean Operators - mostly the same as python
+// > Greater Than, < Less than, >= Greater Than or Equal To,
+// <= Less Than or Equal to, !- or <> Not Equals
+console.log(1<2); // true
+console.log(1 > 2); // false
+console.log(10 >= 10); // true
+console.log(10 <= 5); // false
+console.log(1 != 2); // true
+console.log(1 == 2); // false
+
+// JS has somethign called Strict Equality
+// with lose equality (==), JS can implicitly convert and can check if value is the same
+// with string equality (===), JS ensures both type and value are teh same
+var numOne = 1;
+var strOne = '1';
+
+console.log(numOne == strOne); // true - same value, different datatype
+
+console.log(numOne === strOne); // false because different datatype
+
+
+// Negating Booleans - in Python we had 'not' keywordr
+// In JS, we only have the logical not operator !
+// It can precede any boolean value and switch its value
+console.log(numOne != strOne); // false - same value, different datatype
+
+console.log(numOne !== strOne); // true because different datatype
+
+console.log(!true);
+console.log(!false);
+
+
+// Control Flow
+// If Statements
+
+// if(condition){code to run if true}
+
+var age = 100;
+
+if (age > 18){
+    console.log('You are eligible to vote')
+}
+
+// if/else
+// if (dondidtion){code to run if true} else {code to run if false}
+
+if (age >= 35){
+    console.log('You are old enough to run for president')
+} else {
+    console.log('You are too young to run for president')
+};
+
+
+// if/else if/else
+//if(condition){code if true} else if (condition2){code if condition2 is true} else {code if all else is false}
+age = 9;
+
+if (age>= 65){
+    console.log('You are a senior citizen')
+} else if (age >= 18){
+    console.log('You are an adult')
+} else {
+    console.log('You are a child')
+};
+
+
+// while loops
+// while(condition){code to run each loop until condition is false}
+
+var myRandomNumber = Math.floor(Math.random() * 10)
+console.log('Starting random number:', myRandomNumber);
+
+while (myRandomNumber !== 5){
+    console.log(myRandomNumber);
+    myRandomNumber = Math.floor(Math.random() * 10)
+};
+
+console.log('Ending random number:', myRandomNumber);
